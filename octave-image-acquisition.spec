@@ -4,14 +4,14 @@ Summary:	Capture images from connected devices with Octave
 Name:		octave-%{octpkg}
 Version:	0.2.2
 Release:	1
-Source0:	http://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
+Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
 License:	GPLv3+
 Group:		Sciences/Mathematics
 Url:		https://octave.sourceforge.io/%{octpkg}/
 
 BuildRequires:	octave-devel >= 3.8.0
 BuildRequires:	fltk-devel
-BuildRequires:	libv4l-devel
+BuildRequires:	pkgconfig(libv4l2)
 
 Requires:	octave(api) = %{octave_api}
 
