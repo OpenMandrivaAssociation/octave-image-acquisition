@@ -44,7 +44,10 @@ This package is part of community Octave-Forge collection.
 
 %build
 %set_build_flags
+set +e
 %octave_pkg_build
+find . -name config.log |xargs cat
+exit 1
 
 %install
 %octave_pkg_install
