@@ -7,7 +7,7 @@ Release:	1
 Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
 License:	GPLv3+
 Group:		Sciences/Mathematics
-Url:		https://octave.sourceforge.io/%{octpkg}/
+Url:		https://packages.octave.org/%{octpkg}/
 
 BuildRequires:	octave-devel >= 3.8.0
 BuildRequires:	fltk-devel
@@ -23,8 +23,6 @@ The Octave-forge Image Aquisition package provides functions to capture
 images from connected devices.
 
 Currently only v4l2 is supported.
-
-This package is part of community Octave-Forge collection.
 
 %files
 %license COPYING
