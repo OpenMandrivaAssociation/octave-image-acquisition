@@ -1,13 +1,15 @@
 %global octpkg image-acquisition
 
-Summary:	Capture images from connected devices with Octave
-Name:		octave-%{octpkg}
+Summary:	Capture images from connected devices with Octave)
+Name:		octave-image-acquisition
 Version:	0.2.2
 Release:	1
-Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
 License:	GPLv3+
 Group:		Sciences/Mathematics
-Url:		https://packages.octave.org/%{octpkg}/
+Url:		https://packages.octave.org/image-acquisition/
+Source0:	https://downloads.sourceforge.net/octave/image-acquisition-%{version}.tar.gz
+# (upstream) https://savannah.gnu.org/bugs/index.php?63136
+Patch0:		image-acquisition-0.2.2-octave6.patch
 
 BuildRequires:	octave-devel >= 3.8.0
 BuildRequires:	fltk-devel
@@ -27,18 +29,15 @@ Currently only v4l2 is supported.
 %files
 %license COPYING
 %doc NEWS
-%dir %{octpkglibdir}
-%{octpkglibdir}/*
 %dir %{octpkgdir}
 %{octpkgdir}/*
+%dir %{octpkglibdir}
+%{octpkglibdir}/*
 
 #---------------------------------------------------------------------------
 
 %prep
 %autosetup -p1 -n %{octpkg}-%{version}
-
-# remove backup files
-#find . -name \*~ -delete
 
 %build
 %set_build_flags
