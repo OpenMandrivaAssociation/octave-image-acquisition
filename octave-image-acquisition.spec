@@ -8,8 +8,6 @@ License:	GPLv3+
 Group:		Sciences/Mathematics
 Url:		https://packages.octave.org/image-acquisition/
 Source0:	https://downloads.sourceforge.net/octave/image-acquisition-%{version}.tar.gz
-# (upstream) https://savannah.gnu.org/bugs/index.php?63136
-Patch0:		image-acquisition-0.2.2-octave6.patch
 
 BuildRequires:	octave-devel >= 3.8.0
 BuildRequires:	fltk-devel
