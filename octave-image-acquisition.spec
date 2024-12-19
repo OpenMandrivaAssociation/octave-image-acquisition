@@ -39,6 +39,7 @@ Currently only v4l2 is supported.
 
 %build
 %set_build_flags
+export CXXFLAGS="%optflags `pkg-config --cflags cairo`"
 %octave_pkg_build
 
 %install
