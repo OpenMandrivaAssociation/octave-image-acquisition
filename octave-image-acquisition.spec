@@ -7,7 +7,7 @@ Release:	1
 License:	GPLv3+
 Group:		Sciences/Mathematics
 Url:		https://packages.octave.org/image-acquisition/
-Source0:	https://github.com/Andy1978/octave-image-acquisition/archive/refs/tags/image-acquisition-0.3.2.tar.gz
+Source0:	https://github.com/Andy1978/octave-image-acquisition/archive/refs/tags/image-acquisition-%{version}.tar.gz
 
 BuildRequires:	octave-devel >= 3.8.0
 BuildRequires:	fltk-devel
@@ -35,11 +35,14 @@ Currently only v4l2 is supported.
 #---------------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n %{octpkg}-%{version}
+%autosetup -p1 -n %{name}-%{octpkg}-%{version}
 
 %build
 %set_build_flags
 export CXXFLAGS="%optflags `pkg-config --cflags cairo`"
+pushd src
+autoreconf -fiv
+popd
 %octave_pkg_build
 
 %install
