@@ -2,7 +2,7 @@
 
 Summary:	Capture images from connected devices with Octave)
 Name:		octave-image-acquisition
-Version:	0.3.0
+Version:	0.3.2
 Release:	1
 License:	GPLv3+
 Group:		Sciences/Mathematics
