@@ -2,7 +2,7 @@
 
 Summary:	Capture images from connected devices with Octave)
 Name:		octave-image-acquisition
-Version:	0.3.2
+Version:	0.3.3
 Release:	1
 License:	GPLv3+
 Group:		Sciences/Mathematics
@@ -35,7 +35,7 @@ Currently only v4l2 is supported.
 #---------------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n %{name}-%{octpkg}-%{version}
+%autosetup -p1 -n octave-image-acquisition-image-acquisition-0.3.3
 
 %build
 %set_build_flags
